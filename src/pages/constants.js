@@ -1,5 +1,6 @@
 import ukImg from "../assets/images/uk.png";
 import vocab from "../assets/images/vocab.png";
+import bee from "../assets/images/bee.png"
 import yasmine from "../assets/images/yasmin.jpg"
 import guy from "../assets/images/guy.jpg"
 import rachel from "../assets/images/rachel.jpg"
@@ -22,7 +23,7 @@ export const lessonProgress = [
     imgAlt: "vocab icon",
   },
   {
-    imgUrl: ukImg,
+    imgUrl: bee,
     percentage: 60,
     text: "Spellings",
     frequency: 30,

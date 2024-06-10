@@ -22,12 +22,12 @@ export const ReadyPlay = styled.div`
 
 export const Ready = styled.span`
   color: #5c6bb7;
-  font-weight: 500;
+  font-weight: 700;
 `;
 
 export const Play = styled.span`
   color: #ff8b53;
-  font-weight: 500;
+  font-weight: 700;
 `;
 
 export const ToggleContainer = styled.div`
@@ -67,7 +67,8 @@ export const TodaysGoal = styled.div`
 
 export const Goal = styled.p`
   color: #5c6bb7;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 500;
 `;
 
 export const CircularProgressBarCont = styled.div`
@@ -97,6 +98,11 @@ export const SectionHeader = styled.div`
   margin-bottom: 25px;
   align-items: center;
 `;
+
+export const HeaderText = styled.p`
+    font-size: large;
+    font-weight: 600;
+`
 
 export const Arrow = styled.img`
   border: 1px solid #6572bb;

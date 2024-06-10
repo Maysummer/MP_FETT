@@ -29,6 +29,7 @@ import {
   LeaderDetails,
   Leaders,
   Home,
+  HeaderText,
 } from "./styles/HomePage";
 import fireIcon from "../assets/icons/fire.svg";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -75,7 +76,7 @@ const HomePage = ({ name }) => {
           </CircularProgressBarCont>
         </TodaysGoal>
         <PercentText>
-          <b>Excellent!</b>
+          <HeaderText>Excellent!</HeaderText>
           <p>You're almost there, finish the goal to achieve</p>
           <StreakAdd>
             <img src={fireIcon} width={15} alt="fire icon" />
@@ -84,14 +85,14 @@ const HomePage = ({ name }) => {
         </PercentText>
       </ProgressContainer>
       <SectionHeader>
-        <b>Your lesson</b>
+        <HeaderText>Your lesson</HeaderText>
         <Arrow src={rightArrow} alt="right arrow icon" />
       </SectionHeader>
       <LessonContainer>
         {lessonProgress.map((lesson) => (
           <div>
             <LessonBackground>
-              <img src={lesson.imgUrl} alt={lesson.imgAlt} />
+              <img src={lesson.imgUrl} alt={lesson.imgAlt} height={57}/>
             </LessonBackground>
             <ProgressPercent>
               <ProgressMainDiv>
@@ -109,7 +110,7 @@ const HomePage = ({ name }) => {
         ))}
       </LessonContainer>
       <SectionHeader>
-        <b>Leaderboard</b>
+        <HeaderText>Leaderboard</HeaderText>
         <Arrow src={rightArrow} alt="right arrow icon" />
       </SectionHeader>
       <Leaders>
