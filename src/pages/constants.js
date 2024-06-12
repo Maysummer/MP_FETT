@@ -49,7 +49,7 @@ export const leaders = [
     altImg: "Human portrait",
   },
   {
-    name: "Guy Hakins",
+    name: "Guy Hawkins",
     country: "Spain",
     imgUrl: guy,
     score: 1130,

@@ -27,6 +27,7 @@ import {
   LeaderNameCountry,
   LeaderDetails,
   Leaders,
+  SubHeader,
 } from "./styles/HomePage";
 import fireIcon from "../assets/icons/fire.svg";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -53,7 +54,7 @@ const HomePage = ({ name }) => {
         </Intro>
         <ToggleContainer>
           <FireIcon src={fireIcon} alt="fire icon" />
-          <div>{streak}</div>
+          <small><b>{streak}</b></small>
         </ToggleContainer>
       </Header>
       <ProgressContainer>
@@ -65,7 +66,6 @@ const HomePage = ({ name }) => {
               text={`${percent}%`}
               styles={buildStyles({
                 textColor: "black",
-                textWeight: 700,
                 trailColor: "#FFD3BE",
                 pathColor: "#ff8b53",
               })}
@@ -97,7 +97,7 @@ const HomePage = ({ name }) => {
               </ProgressMainDiv>
               <span>{lesson.percentage}%</span>
             </ProgressPercent>
-            <b>{lesson.text}</b>
+            <SubHeader>{lesson.text}</SubHeader>
             <Frequency>
               <div>{lesson.frequency} days</div>
               <Dot></Dot>
@@ -116,7 +116,7 @@ const HomePage = ({ name }) => {
             <LeaderDetails>
               <LeaderImg src={leader.imgUrl} alt={leader.altImg} />
               <LeaderNameCountry>
-                <b>{leader.name}</b>
+                <SubHeader>{leader.name}</SubHeader>
                 <p>{leader.country}</p>
               </LeaderNameCountry>
             </LeaderDetails>

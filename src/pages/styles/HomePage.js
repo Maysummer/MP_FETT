@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "./General";
 
 export const Header = styled.div`
   display: flex;
@@ -17,13 +18,15 @@ export const ReadyPlay = styled.div`
 `;
 
 export const Ready = styled.span`
-  color: #6572BB;
-  font-weight: 700;
+  color: ${colors.darkBlue};
+  font-weight: 600;
+  font-size: 15px;
 `;
 
 export const Play = styled.span`
-  color: #ff8b53;
-  font-weight: 700;
+  color: ${colors.darkOrange};
+  font-weight: 600;
+  font-size: 15px;
 `;
 
 export const ToggleContainer = styled.div`
@@ -39,7 +42,7 @@ export const ToggleContainer = styled.div`
 
 export const FireIcon = styled.img`
   height: 25px;
-  border: 1px solid #ff8b53;
+  border: 1px solid ${colors.darkOrange};
   border-radius: 50%;
   padding: 3px;
 `;
@@ -47,7 +50,7 @@ export const FireIcon = styled.img`
 export const ProgressContainer = styled.div`
   display: flex;
   align-items: center;
-  border: 1.7px solid #3648ad;
+  border: 1.9px solid ${colors.darkBlue};
   border-radius: 20px;
   padding: 10px 15px;
   gap: 20px;
@@ -62,7 +65,7 @@ export const TodaysGoal = styled.div`
 `;
 
 export const Goal = styled.p`
-  color: #5c6bb7;
+  color: ${colors.darkBlue};
   font-size: 11px;
   font-weight: 500;
 `;
@@ -84,14 +87,14 @@ export const StreakAdd = styled.div`
 `;
 
 export const FireNum = styled.p`
-  color: #ff8b53;
+  color: ${colors.darkOrange};
 `;
 
 export const SectionHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   align-items: center;
 `;
 
@@ -117,13 +120,13 @@ export const ContentBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.7em;
 `;
 
 export const LessonBackground = styled(ContentBackground)`
   border-radius: 2em;
   height: 90px;
   width: 130px;
+  margin-bottom: 0.4em;
 `;
 
 export const ProgressPercent = styled.div`
@@ -135,15 +138,20 @@ export const ProgressPercent = styled.div`
 export const ProgressMainDiv = styled.div`
   height: 7px;
   width: 100px;
-  background-color: #cad0f0;
+  background-color: ${colors.lightBlue};
   border-radius: 12px;
 `;
 export const ProgressChildDiv = styled.div`
   height: 100%;
   width: 60%;
-  background-color: #6572bb;
+  background-color: ${colors.darkBlue};
   border-radius: 12px;
   text-align: left;
+`;
+
+export const SubHeader = styled.div`
+  font-size: 15px;
+  font-weight: 500;
 `;
 
 export const Frequency = styled.div`
@@ -151,12 +159,13 @@ export const Frequency = styled.div`
   align-items: center;
   gap: 3px;
   color: gray;
+  font-size: 12px;
 `;
 
 export const Dot = styled.div`
   height: 3px;
   width: 3px;
-  background-color: gray;
+  background-color: ${colors.ash};
   border-radius: 50%;
 `;
 
@@ -172,6 +181,7 @@ export const LeaderBackground = styled(ContentBackground)`
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 0.5em;
+  margin-bottom: 1.2em;
 `;
 
 export const LeaderDetails = styled.div`
@@ -183,7 +193,7 @@ export const LeaderImg = styled.img`
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  border: 3px solid #ffd3be;
+  border: 3px solid ${colors.lightOrange};
   object-fit: cover;
 `;
 
@@ -193,7 +203,7 @@ export const LeaderNameCountry = styled.div`
   gap: 5px;
 
   p {
-    color: gray;
+    color: ${colors.ash};
     margin-top: -5px;
     font-size: 12px;
   }

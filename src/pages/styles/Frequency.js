@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { colors } from "./General";
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.7em;
+  align-items: center;
 `;
 
 export const Date = styled.div`
@@ -13,8 +15,7 @@ export const Date = styled.div`
 
 export const Day = styled.p`
   font-size: 12px;
-  font-weight: 400;
-  color: ${(props) => (props.$today ? "#ff8b53" : "black")};
+  color: ${(props) => (props.$today ? colors.darkOrange : "black")};
 `;
 
 const NumBackground = styled.div`
@@ -28,19 +29,19 @@ const NumBackground = styled.div`
 `;
 
 export const ImgWithBg = styled(NumBackground).attrs({ as: "img" })`
-  background-color: #6572bb;
+  background-color: ${colors.darkBlue};
 `;
 
 export const PWithBg = styled(NumBackground).attrs({ as: "p" })`
-  background-color: ${(props) => (props.$today ? "#ff8b53" : "white")};
-  color: ${(props) => (props.$today ? "white" : "#6572BB")};
+  background-color: ${(props) => (props.$today ? colors.darkOrange : "white")};
+  color: ${(props) => (props.$today ? "white" : colors.darkBlue)};
   font-weight: 500;
 `;
 
 export const Dot = styled.div`
   height: 4px;
   width: 4px;
-  background-color: #6572bb;
+  background-color: ${colors.darkBlue};
   border-radius: 50%;
 `;
 
@@ -69,7 +70,7 @@ export const SKillImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6572bb;
+  background-color: ${colors.darkBlue};
   border-radius: 50%;
   width: 4.5em;
   height: 4.5em;
@@ -86,7 +87,7 @@ export const SkillName = styled.p`
 `;
 
 export const SkillPercent = styled.p`
-  color: gray;
+  color: ${colors.ash};
   margin-top: -7px;
 `;
 
@@ -94,8 +95,9 @@ export const Status = styled.p`
   font-weight: 500;
   padding: 0.2em 1em;
   border-radius: 2em;
-  border: 1px solid #ff8b53;
+  border: 1px solid ${colors.darkOrange};
   background-color: ${(props) =>
-    props.status === "Completed" ? "#ff8b53" : "white"};
-  color: ${(props) => (props.status === "Completed" ? "white" : "#ff8b53")};
+    props.status === "Completed" ? colors.darkOrange : "white"};
+  color: ${(props) =>
+    props.status === "Completed" ? "white" : colors.darkOrange};
 `;
