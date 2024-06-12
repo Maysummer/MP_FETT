@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Arrow,
   FireIcon,
   FireNum,
   Goal,
@@ -28,8 +27,6 @@ import {
   LeaderNameCountry,
   LeaderDetails,
   Leaders,
-  Home,
-  HeaderText,
 } from "./styles/HomePage";
 import fireIcon from "../assets/icons/fire.svg";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -37,15 +34,15 @@ import "react-circular-progressbar/dist/styles.css";
 import rightArrow from "../assets/icons/rightArrow.svg";
 import { leaders, lessonProgress } from "./constants";
 import upArrow from "../assets/icons/upArrow.svg";
-import FooterComp from "../components/Footer";
-
+import { Page, Arrow, HeaderText } from "./styles/General";
 
 const HomePage = ({ name }) => {
   const percent = 70;
   const streak = 65;
+  const sortedLeaders = leaders.sort((a, b) => b.score - a.score);
 
   return (
-    <Home>
+    <Page>
       <Header>
         <Intro>
           <p>Hello {name},</p>
@@ -114,7 +111,7 @@ const HomePage = ({ name }) => {
         <Arrow src={rightArrow} alt="right arrow icon" />
       </SectionHeader>
       <Leaders>
-        {leaders.map((leader) => (
+        {sortedLeaders.map((leader) => (
           <LeaderBackground>
             <LeaderDetails>
               <LeaderImg src={leader.imgUrl} alt={leader.altImg} />
@@ -133,8 +130,7 @@ const HomePage = ({ name }) => {
           </LeaderBackground>
         ))}
       </Leaders>
-      <FooterComp />
-    </Home>
+    </Page>
   );
 };
 

@@ -1,11 +1,13 @@
 import ukImg from "../assets/images/uk.png";
 import vocab from "../assets/images/vocab.png";
-import bee from "../assets/images/bee.png"
-import yasmine from "../assets/images/yasmin.jpg"
-import guy from "../assets/images/guy.jpg"
-import rachel from "../assets/images/rachel.jpg"
-import adam from "../assets/images/adam.jpg"
-import sarah from "../assets/images/sarah.jpg"
+import bee from "../assets/images/bee.png";
+import yasmine from "../assets/images/yasmin.jpg";
+import guy from "../assets/images/guy.jpg";
+import adam from "../assets/images/adam.jpg";
+import listening from "../assets/images/listening.png";
+import reading from "../assets/images/reading.png";
+import speaking from "../assets/images/speaking.png";
+import writing from "../assets/images/writing.png";
 
 export const lessonProgress = [
   {
@@ -32,9 +34,33 @@ export const lessonProgress = [
 ];
 
 export const leaders = [
-  { name: "Yasmine Lee", country: "Taiwan", imgUrl: yasmine, score: 1230, altImg: "Human portrait"},
-  { name: "Guy Hakins", country: "Spain", imgUrl: guy, score: 1130, altImg: "Human portrait" },
-  { name: "Adam Collins", country: "Niger", imgUrl: adam, score: 2430, altImg: "Human portrait" },
-  { name: "Rachel Durray", country: "Ghana", imgUrl: rachel, score: 1330, altImg: "Human portrait" },
-  { name: "Sarah Summer", country: "Nigeria", imgUrl: sarah, score: 3130, altImg: "Human portrait" },
+  {
+    name: "Adam Collins",
+    country: "Niger",
+    imgUrl: adam,
+    score: 1110,
+    altImg: "Human portrait",
+  },
+  {
+    name: "Yasmine Lee",
+    country: "Taiwan",
+    imgUrl: yasmine,
+    score: 1230,
+    altImg: "Human portrait",
+  },
+  {
+    name: "Guy Hakins",
+    country: "Spain",
+    imgUrl: guy,
+    score: 1130,
+    altImg: "Human portrait",
+  },
+];
+
+export const skills = [
+  { name: "Reading", percentage: 100, status: "Completed", imgUrl: reading },
+  { name: "Writing", percentage: 85, status: "Good work", imgUrl: writing },
+  { name: "Speaking", percentage: 100, status: "Completed", imgUrl: speaking },
+  {name: "Listening", percentage: 70, status: "Good work", imgUrl: listening}
+
 ];

@@ -5,7 +5,6 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1em -20px 0 -20px;
   position: fixed;
   bottom: 0;
   width: 100%;

@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Home = styled.div`
-  padding: 30px 20px 0 20px;
-`;
-
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
@@ -21,7 +17,7 @@ export const ReadyPlay = styled.div`
 `;
 
 export const Ready = styled.span`
-  color: #5c6bb7;
+  color: #6572BB;
   font-weight: 700;
 `;
 
@@ -99,17 +95,6 @@ export const SectionHeader = styled.div`
   align-items: center;
 `;
 
-export const HeaderText = styled.p`
-    font-size: large;
-    font-weight: 600;
-`
-
-export const Arrow = styled.img`
-  border: 1px solid #6572bb;
-  border-radius: 5px;
-  padding: 4px;
-`;
-
 export const HideScrollBar = styled.div`
   &::-webkit-scrollbar {
     display: none;
@@ -177,6 +162,7 @@ export const Dot = styled.div`
 
 export const Leaders = styled(HideScrollBar)`
   overflow-y: auto;
+  padding-bottom: 5em;
 `;
 
 export const LeaderBackground = styled(ContentBackground)`
