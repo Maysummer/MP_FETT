@@ -1,13 +1,13 @@
-import ukImg from "../assets/images/uk.png";
-import vocab from "../assets/images/vocab.png";
-import bee from "../assets/images/bee.png";
-import yasmine from "../assets/images/yasmin.jpg";
-import guy from "../assets/images/guy.jpg";
-import adam from "../assets/images/adam.jpg";
-import listening from "../assets/images/listening.png";
-import reading from "../assets/images/reading.png";
-import speaking from "../assets/images/speaking.png";
-import writing from "../assets/images/writing.png";
+import ukImg from "./assets/images/uk.png";
+import vocab from "./assets/images/vocab.png";
+import bee from "./assets/images/bee.png";
+import yasmine from "./assets/images/yasmin.jpg";
+import guy from "./assets/images/guy.jpg";
+import adam from "./assets/images/adam.jpg";
+import listening from "./assets/images/listening.png";
+import reading from "./assets/images/reading.png";
+import speaking from "./assets/images/speaking.png";
+import writing from "./assets/images/writing.png";
 
 export const lessonProgress = [
   {

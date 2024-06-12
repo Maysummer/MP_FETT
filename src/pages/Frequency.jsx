@@ -19,7 +19,7 @@ import {
 } from "./styles/Frequency";
 import check from "../assets/icons/check.svg";
 import { Dot } from "./styles/Frequency";
-import { skills } from "./constants";
+import { skills } from "../constants";
 
 const Frequency = () => {
   return (
@@ -76,7 +76,6 @@ const Frequency = () => {
             <SkillName>{skill.name}</SkillName>
             <SkillPercent>{skill.percentage}%</SkillPercent>
             <Status status={skill.status}>{skill.status}</Status>
-            {console.log(skill.name, skill.status)}
           </SkillBackground>
         ))}
       </SkillsContainer>

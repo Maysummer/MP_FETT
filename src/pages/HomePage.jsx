@@ -33,7 +33,7 @@ import fireIcon from "../assets/icons/fire.svg";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import rightArrow from "../assets/icons/rightArrow.svg";
-import { leaders, lessonProgress } from "./constants";
+import { leaders, lessonProgress } from "../constants";
 import upArrow from "../assets/icons/upArrow.svg";
 import { Page, Arrow, HeaderText } from "./styles/General";
 
@@ -54,7 +54,9 @@ const HomePage = ({ name }) => {
         </Intro>
         <ToggleContainer>
           <FireIcon src={fireIcon} alt="fire icon" />
-          <small><b>{streak}</b></small>
+          <small>
+            <b>{streak}</b>
+          </small>
         </ToggleContainer>
       </Header>
       <ProgressContainer>
@@ -89,7 +91,7 @@ const HomePage = ({ name }) => {
         {lessonProgress.map((lesson) => (
           <div key={lesson.id}>
             <LessonBackground>
-              <img src={lesson.imgUrl} alt={lesson.imgAlt} height={57}/>
+              <img src={lesson.imgUrl} alt={lesson.imgAlt} height={57} />
             </LessonBackground>
             <ProgressPercent>
               <ProgressMainDiv>

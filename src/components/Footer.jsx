@@ -10,20 +10,19 @@ import { Footer } from "./styles/footer";
 const FooterComp = ({ activePage, setActivePage }) => {
   return (
     <Footer>
-      {console.log(activePage)}
       <img
         onClick={() => setActivePage("Home")}
         width={21}
         alt=""
-        active={true}
         src={activePage === "Home" ? homeb : home}
+        className={activePage === "Home" ? "active" : ""}
       />
       <img
         src={activePage === "Frequency" ? frequencyb : frequency}
-        active={activePage === "Frequency" ? true : false}
         width={21}
         alt=""
         onClick={() => setActivePage("Frequency")}
+        className={activePage === "Frequency" ? "active" : ""}
       />
       <img src={persons} alt="" />
       <img src={settings} alt="" />
