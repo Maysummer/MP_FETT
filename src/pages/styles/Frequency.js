@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2em;
+  margin-bottom: 1.7em;
 `;
 
 export const Date = styled.div`
@@ -49,22 +49,53 @@ export const DotContainer = styled.div`
   gap: 2px;
 `;
 
+export const SkillsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+`;
+
 export const SkillBackground = styled.div`
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 1em 3em;
+  padding: 1em 0;
+  align-items: center;
+  gap: 0.7em;
+  border-radius: 2em;
+`;
+
+export const SKillImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6572bb;
+  border-radius: 50%;
+  width: 4.5em;
+  height: 4.5em;
 `;
 
 export const SkillImg = styled.img`
-  border-radius: 50%;
-  width: 3em;
-  height: 3em;
-  padding: 10px;
+  width: 2.2em;
+  height: 2.2em;
+  filter: invert(100%) brightness(200%);
+`;
+
+export const SkillName = styled.p`
+  font-weight: 500;
+`;
+
+export const SkillPercent = styled.p`
+  color: gray;
+  margin-top: -7px;
 `;
 
 export const Status = styled.p`
-  padding: 1em;
+  font-weight: 500;
+  padding: 0.2em 1em;
   border-radius: 2em;
-  background-color: red;
+  border: 1px solid #ff8b53;
+  background-color: ${(props) =>
+    props.status === "Completed" ? "#ff8b53" : "white"};
+  color: ${(props) => (props.status === "Completed" ? "white" : "#ff8b53")};
 `;

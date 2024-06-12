@@ -2,10 +2,25 @@ import React from "react";
 import { Page, Arrow, HeaderText } from "./styles/General";
 import leftArrow from "../assets/icons/leftArrow.svg";
 import rightArrow from "../assets/icons/rightArrow.svg";
-import { Date, Day, DotContainer, Header, ImgWithBg, PWithBg, SkillBackground, SkillImg, Status } from "./styles/Frequency";
+import {
+  Date,
+  Day,
+  DotContainer,
+  Header,
+  ImgWithBg,
+  PWithBg,
+  SKillImgContainer,
+  SkillBackground,
+  SkillImg,
+  SkillName,
+  SkillPercent,
+  SkillsContainer,
+  Status,
+} from "./styles/Frequency";
 import check from "../assets/icons/check.svg";
 import { Dot } from "./styles/Frequency";
-import reading from "../assets/images/reading.png"
+import reading from "../assets/images/reading.png";
+import { skills } from "./constants";
 
 const Frequency = () => {
   return (
@@ -53,12 +68,19 @@ const Frequency = () => {
           <Dot></Dot>
         </DotContainer>
       </Header>
-      <SkillBackground>
-        <SkillImg src={reading} />
-        <p>reading</p>
-        <p>100%</p>
-        <Status>Completed</Status>
-      </SkillBackground>
+      <SkillsContainer>
+        {skills.map((skill) => (
+          <SkillBackground>
+            <SKillImgContainer>
+              <SkillImg src={skill.imgUrl} />
+            </SKillImgContainer>
+            <SkillName>{skill.name}</SkillName>
+            <SkillPercent>{skill.percentage}%</SkillPercent>
+            <Status status={skill.status}>{skill.status}</Status>
+            {console.log(skill.name, skill.status)}
+          </SkillBackground>
+        ))}
+      </SkillsContainer>
     </Page>
   );
 };
