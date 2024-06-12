@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       {activePage === "Home" && <HomePage name="Rachel" />}
       {activePage === "Frequency" && <Frequency />}
-      <FooterComp setActivePage={setActivePage} />
+      <FooterComp activePage={activePage} setActivePage={setActivePage} />
     </div>
   );
 }

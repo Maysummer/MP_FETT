@@ -12,4 +12,11 @@ export const Footer = styled.footer`
   border-top-left-radius: 1.5em;
   padding: 1.5em 0;
   box-shadow: 0 -10px 20px #cad0f0;
+
+  img {
+    filter: ${(props) =>
+      (props.$active
+        ? "invert(43%) sepia(49%) saturate(492%) hue-rotate(193deg) brightness(97%) contrast(89%)"
+        : "invert(50%) sepia(7%) saturate(472%) hue-rotate(179deg) brightness(85%) contrast(83%)")};
+  }
 `;

@@ -11,6 +11,7 @@ import writing from "../assets/images/writing.png";
 
 export const lessonProgress = [
   {
+    id: 1,
     imgUrl: ukImg,
     percentage: 60,
     text: "Speaking 101",
@@ -18,6 +19,7 @@ export const lessonProgress = [
     imgAlt: "uk flag",
   },
   {
+    id: 2,
     imgUrl: vocab,
     percentage: 60,
     text: "New words",
@@ -25,6 +27,7 @@ export const lessonProgress = [
     imgAlt: "vocab icon",
   },
   {
+    id: 3,
     imgUrl: bee,
     percentage: 60,
     text: "Spellings",
@@ -35,6 +38,7 @@ export const lessonProgress = [
 
 export const leaders = [
   {
+    id: 1,
     name: "Adam Collins",
     country: "Niger",
     imgUrl: adam,
@@ -42,6 +46,7 @@ export const leaders = [
     altImg: "Human portrait",
   },
   {
+    id: 2,
     name: "Yasmine Lee",
     country: "Taiwan",
     imgUrl: yasmine,
@@ -58,9 +63,32 @@ export const leaders = [
 ];
 
 export const skills = [
-  { name: "Reading", percentage: 100, status: "Completed", imgUrl: reading },
-  { name: "Writing", percentage: 85, status: "Good work", imgUrl: writing },
-  { name: "Speaking", percentage: 100, status: "Completed", imgUrl: speaking },
-  {name: "Listening", percentage: 70, status: "Good work", imgUrl: listening}
-
+  {
+    id: 1,
+    name: "Reading",
+    percentage: 100,
+    status: "Completed",
+    imgUrl: reading,
+  },
+  {
+    id: 2,
+    name: "Writing",
+    percentage: 85,
+    status: "Good work",
+    imgUrl: writing,
+  },
+  {
+    id: 3,
+    name: "Speaking",
+    percentage: 100,
+    status: "Completed",
+    imgUrl: speaking,
+  },
+  {
+    id: 4,
+    name: "Listening",
+    percentage: 70,
+    status: "Good work",
+    imgUrl: listening,
+  },
 ];

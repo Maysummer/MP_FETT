@@ -19,7 +19,6 @@ import {
 } from "./styles/Frequency";
 import check from "../assets/icons/check.svg";
 import { Dot } from "./styles/Frequency";
-import reading from "../assets/images/reading.png";
 import { skills } from "./constants";
 
 const Frequency = () => {
@@ -70,7 +69,7 @@ const Frequency = () => {
       </Header>
       <SkillsContainer>
         {skills.map((skill) => (
-          <SkillBackground>
+          <SkillBackground key={skill.id}>
             <SKillImgContainer>
               <SkillImg src={skill.imgUrl} />
             </SKillImgContainer>

@@ -87,7 +87,7 @@ const HomePage = ({ name }) => {
       </SectionHeader>
       <LessonContainer>
         {lessonProgress.map((lesson) => (
-          <div>
+          <div key={lesson.id}>
             <LessonBackground>
               <img src={lesson.imgUrl} alt={lesson.imgAlt} height={57}/>
             </LessonBackground>
@@ -112,7 +112,7 @@ const HomePage = ({ name }) => {
       </SectionHeader>
       <Leaders>
         {sortedLeaders.map((leader) => (
-          <LeaderBackground>
+          <LeaderBackground key={leader.id}>
             <LeaderDetails>
               <LeaderImg src={leader.imgUrl} alt={leader.altImg} />
               <LeaderNameCountry>

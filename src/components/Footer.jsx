@@ -1,17 +1,32 @@
 import React from "react";
-import home from "../assets/icons/home.svg";
-import frequency from "../assets/icons/frequency.svg";
+import home from "../assets/icons/home.png";
+import homeb from "../assets/icons/homeb.png";
+import frequency from "../assets/icons/frequency.png";
+import frequencyb from "../assets/icons/frequencyb.png";
 import persons from "../assets/icons/persons.svg";
 import settings from "../assets/icons/settings.svg";
 import { Footer } from "./styles/footer";
 
-const FooterComp = ({ setActivePage }) => {
+const FooterComp = ({ activePage, setActivePage }) => {
   return (
     <Footer>
-      <img src={home} alt="" onClick={() => setActivePage("Home")} />
-      <img src={frequency} alt="" onClick={() => setActivePage("Frequency")} />
-      <img src={persons} alt="" onClick={() => setActivePage("Persons")} />
-      <img src={settings} alt="" onClick={() => setActivePage("Settings")} />
+      {console.log(activePage)}
+      <img
+        onClick={() => setActivePage("Home")}
+        width={21}
+        alt=""
+        active={true}
+        src={activePage === "Home" ? homeb : home}
+      />
+      <img
+        src={activePage === "Frequency" ? frequencyb : frequency}
+        active={activePage === "Frequency" ? true : false}
+        width={21}
+        alt=""
+        onClick={() => setActivePage("Frequency")}
+      />
+      <img src={persons} alt="" />
+      <img src={settings} alt="" />
     </Footer>
   );
 };
